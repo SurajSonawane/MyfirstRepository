@@ -10,12 +10,12 @@ import java.io.ObjectOutputStream;
 public class Demoserilia2 {
 public static void main(String[] args) throws Exception {
 	
-	Account a1=new Account();
+	Account a1=new Account("suraj","Maharashtra");
 	System.out.println(a1.name+"-------"+a1.password);
 	FileOutputStream fout3=new FileOutputStream("Account.txt");
 	ObjectOutputStream obj3=new ObjectOutputStream(fout3);
-	obj3.writeObject(a1);
-	
+	 obj3.writeObject(a1);
+	//System.out.println();
 	System.out.println(a1.name+"-----------"+a1.password);
 	
 	FileInputStream fin3=new FileInputStream("Account.txt");

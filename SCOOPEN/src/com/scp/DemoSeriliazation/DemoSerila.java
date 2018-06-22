@@ -12,13 +12,13 @@ public static void main(String[] args) throws Exception {
 	FileOutputStream fout= new FileOutputStream("newFile.txt");
 	ObjectOutputStream oobj=new ObjectOutputStream(fout);
 	oobj.writeObject(d1);
-	
+	System.out.println("at serilization level"+d1);
 	FileInputStream fin= new FileInputStream("newFile.txt");
 	ObjectInputStream oin=new ObjectInputStream(fin);
 	Dog d2 =(Dog) oin.readObject();
+	// After this process we only read the data from file
 	
-	
-	System.out.println(d1+"-------------"+d2);
+	System.out.println(d1+"------deseri-------"+d2);
 	
 	 
 }
